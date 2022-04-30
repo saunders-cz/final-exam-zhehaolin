@@ -12,7 +12,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { EditMeal } from "../modules/meal/EditMeal";
 import { AddMeal } from "../modules/meal/AddMeal";
 
-export const Admin = () => {
+export const AdminPage = () => {
   const navigate = useNavigate();
   const params = useParams();
   const [showAddMeal, setShowAddMeal] = useState(false);
@@ -23,7 +23,7 @@ export const Admin = () => {
     <>
       <Grid container direction="column">
         <Grid item align="center">
-          <Typography variant="h2">Admin Meal Access</Typography>
+          <Typography variant="h2">Manage Meal</Typography>
         </Grid>
         <Grid item>
           <Button onClick={() => setShowAddMeal(true)}>Add Meal</Button>
