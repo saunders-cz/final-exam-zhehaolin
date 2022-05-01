@@ -1,5 +1,6 @@
 import { Card,CardMedia,CardActions,Button, Grid, CardContent, Typography } from '@mui/material';
 import React from 'react';
+import { Cart } from './Cart';
 
 export const MealList = ({meals}) => {
     return (

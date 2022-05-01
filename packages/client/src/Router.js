@@ -5,6 +5,7 @@ import { AdminPage } from "./pages/AdminPage";
 import { HomePage } from "./pages/HomePage";
 import { MenuPage } from "./pages/MenuPage"
 import { RegisterPage } from "./pages/RegisterPage";
+import { OrderPage } from "./pages/OrderPage";
 
 
 export const Router = () => {
@@ -17,6 +18,7 @@ export const Router = () => {
           <Route path="/manage" element={<AdminPage />} />
           <Route path="meals/:id" element={<AdminPage />} />
           <Route path="/register" element={<RegisterPage />} />
+          <Route path="/order" element={<OrderPage />} />
         </Route>
        
 
