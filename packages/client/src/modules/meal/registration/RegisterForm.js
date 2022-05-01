@@ -104,7 +104,6 @@ export const RegisterForm = ({ id, onClose }) => {
             />
           </Grid>
           <Grid item xs={12}>
-          <Grid item xs={12}>
           <FormControl>
             <FormLabel>Opt in for Mailing list:</FormLabel>
             <RadioGroup
@@ -129,7 +128,11 @@ export const RegisterForm = ({ id, onClose }) => {
               
             </RadioGroup>
           </FormControl>
-        </Grid>
+
+
+          </Grid>
+        
+          <Grid>
             <Button type="submit" disabled={loading}>
               Save
             </Button>
