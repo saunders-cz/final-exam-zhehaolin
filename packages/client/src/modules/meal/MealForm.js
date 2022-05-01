@@ -53,8 +53,8 @@ export const MealForm = ({ id, initialValues, onClose }) => {
   });
 
   return (
-    <form onSubmit={handleSubmit} onReset={handleReset}>
-      <Grid container spacing={2} direction="column">
+    <form onSubmit={handleSubmit} onReset={handleReset} >
+      <Grid container spacing={2} direction="column" >
         <Grid item>
           <Typography variant="h3">
             {id !== undefined ? "Edit" : "Add"} Meal

@@ -17,6 +17,21 @@ export const typeDefs = gql`
     price: Float!
     categoryId: ID!
   }
+  type User {
+    id: ID!
+    firstname: String!
+    lastname: String!
+    address: String!
+    email: String!
+    mailinglist: Boolean!
+  }
+  input UserInput {
+    firstname: String!
+    lastname: String!
+    address: String!
+    email: String!
+    mailinglist: Boolean!
+  }
   type Category {
     id: ID!
     title: String!
@@ -33,10 +48,13 @@ export const typeDefs = gql`
     meals: [Meal]
     meal(id: ID!): Meal
     categories: [Category]
+    user(id: ID!): User
+    users: [User]
   }
   type Mutation {
     addMeal(input: MealInput!): Result
     updateMeal(id: ID!, input: MealInput!): Result
+    addUser(input: UserInput!): Result
    
   }
 `;

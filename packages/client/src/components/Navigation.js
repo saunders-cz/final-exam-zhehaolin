@@ -21,12 +21,12 @@ export const Navigation = () => {
         </Link>
       </Grid> <Grid item>
         <Link to="/register">
-          <Typography>register</Typography>
+          <Typography>Register</Typography>
         </Link>
       </Grid>
       <Grid item>
         <Link to="/manage">
-          <Typography>manage</Typography>
+          <Typography>Manage</Typography>
         </Link>
       </Grid>
     </Grid>

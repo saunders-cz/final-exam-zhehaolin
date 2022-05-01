@@ -35,3 +35,15 @@ export const categories = [
       title: "Fan Favorites",
     },
   ];
+  export const users = [
+    {
+      id: 1,
+      firstname:"Zhehao",
+      lastname:"Lin",
+      address: "717 park point",
+      email: "test@gmail.com",
+      mailinglist:true,
+    },
+  ];
+
+

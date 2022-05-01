@@ -1,6 +1,6 @@
-import { Model, DataTypes } from "sequelize";
+import { Model, DataTypes, BOOLEAN } from "sequelize";
 import { dbConnection } from "./connections.js";
-import { meals, categories } from "../data/meals.js";
+import { meals, categories, users } from "../data/data.js";
 
 const { STRING, INTEGER, FLOAT } = DataTypes;
 
@@ -23,6 +23,25 @@ Meal.init(
     name: {
       singular: "meal",
       plural: "meals",
+    },
+  }
+);
+class User extends Model {}
+
+User.init(
+  {
+    id: { type: INTEGER, autoIncrement: true, primaryKey: true },
+    firstname: { type: STRING, allowNull: false },
+    lastname: { type: STRING, allowNull: false },
+    address: { type: STRING, allowNull: false },
+    email: { type: STRING, allowNull: false },
+    mailinglist: { type: BOOLEAN, allowNull: false },
+  },
+  {
+    sequelize: dbConnection,
+    name: {
+      singular: "user",
+      plural: "users",
     },
   }
 );
@@ -59,4 +78,4 @@ await Meal.bulkCreate(
   })
 );
 
-export { Meal, Category };
+export { Meal, Category, User};

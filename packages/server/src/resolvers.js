@@ -1,5 +1,4 @@
-import { meals } from "../data/meals.js";
-import { Meal, Category } from "./models.js";
+import { Meal, Category, User } from "./models.js";
 export const resolvers = {
   Query: {
     meals: async (parent, args) => {
@@ -16,6 +15,9 @@ export const resolvers = {
     categories: async () => {
       return await Category.findAll({ include: Meal });
     },
+    users: async () => {
+      return await User.findByPk(args.id);
+    },
   },
   Mutation: {
     addMeal: async (parent, args) => {
@@ -25,6 +27,12 @@ export const resolvers = {
     },
     updateMeal: async (parent, { id, input }) => {
       await Meal.update(input, {
+        where: { id },
+      });
+      return { ok: true };
+    },
+    addUser: async (parent, { id, input }) => {
+      await User.create(input, {
         where: { id },
       });
       return { ok: true };
