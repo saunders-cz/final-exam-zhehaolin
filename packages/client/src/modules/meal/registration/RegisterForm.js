@@ -132,7 +132,7 @@ export const RegisterForm = ({ id, onClose }) => {
 
           </Grid>
         
-          <Grid>
+          <Grid item xs={12}>
             <Button type="submit" disabled={loading}>
               Save
             </Button>

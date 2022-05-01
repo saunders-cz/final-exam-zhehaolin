@@ -8,6 +8,7 @@ export const OrderPage = () => {
         <Typography variant="h2" align="center">
           Shopping Cart
         </Typography>
+        
         <Cart />
       </Grid>
     </>
