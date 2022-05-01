@@ -6,6 +6,6 @@
   "scripts": {
     "start": "lerna exec --parallel npm run start"
   },
-  "author": "C. Zoellick",
+  "author": "Zhehao Lin",
   "license": "UNLICENSED"
 }

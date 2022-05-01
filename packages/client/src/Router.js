@@ -14,6 +14,7 @@ export const Router = () => {
           <Route index element={<HomePage />} />
           <Route path="/menu" element={<MenuPage />} />
           <Route path="/manage" element={<AdminPage />} />
+          <Route path="meals/:id" element={<AdminPage />} />
         </Route>
        
 
