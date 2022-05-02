@@ -1,8 +1,9 @@
-import { Card,CardMedia,CardActions,Button, Grid, CardContent, Typography } from '@mui/material';
+import { Link,Card,CardMedia,CardActions,Button, Grid, CardContent, Typography } from '@mui/material';
 import React from 'react';
-import { Cart } from './Cart';
+import { useNavigate } from "react-router-dom";
 
 export const MealList = ({meals}) => {
+    const navigate = useNavigate();
     return (
         <Grid container spacing={2}>
             {meals.map((meal,i) => (
@@ -28,7 +29,9 @@ export const MealList = ({meals}) => {
                         </Typography>
                     </CardContent>
                     <CardActions>
-                        <Button>Add Item</Button>
+                        
+                        <Button onClick={() => navigate(`/order`)}>Add Item</Button>
+                        
                     </CardActions>
                 </Card>
                 </Grid>

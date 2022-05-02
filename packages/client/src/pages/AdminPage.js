@@ -33,7 +33,7 @@ export const AdminPage = () => {
         </Grid>
       </Grid>
       {showEditMeal && (
-        <Dialog open={true} onClose={() => navigate("/")}>
+        <Dialog open={true} onClose={() => navigate("/manage")}>
           <DialogTitle />
           <DialogContent>
             <EditMeal onClose={() => navigate("/")} />
