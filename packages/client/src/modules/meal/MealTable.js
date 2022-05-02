@@ -4,10 +4,14 @@ import { GET_MEALS } from "./queries";
 import { Icon, Typography } from "@mui/material";
 import { DataGrid, GridActionsCellItem } from "@mui/x-data-grid";
 import { useNavigate } from "react-router-dom";
+import EditIcon  from "@mui/icons-material/Edit";
+import  DeleteIcon  from "@mui/icons-material/Delete";
+import { DELETE_MEAL } from "./mutations";
 
 export const MealTable = () => {
   const { data, loading, error } = useQuery(GET_MEALS);
   const navigate = useNavigate();
+ 
 
   if (error) return <Typography color="error">{error.message}</Typography>;
   if (loading) return <Typography>Loading</Typography>;
@@ -35,13 +39,19 @@ export const MealTable = () => {
       headerName: "Actions",
       getActions: (params) => [
         <GridActionsCellItem
-          icon={<Icon>edit</Icon>}
+          icon={<EditIcon>edit</EditIcon>}
           onClick={() => navigate(`/meals/${params.row.id}`)}
           label="Edit"
          
         />,
+        // <GridActionsCellItem
+        //   icon={<DeleteIcon>delete</DeleteIcon>}
+        //   onClick={() => setMealToDelete(params.row)}
+        //   label="Delete"
+        // />,
       ],
     },
+    
   ];
 
   return (
